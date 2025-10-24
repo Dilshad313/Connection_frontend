@@ -16,7 +16,7 @@ export default function Register() {
     setMsg("");
 
     try {
-      const res = await axios.post("http://localhost:3000/api/adduser", formData);
+      const res = await axios.post("https://connection-backend-1.onrender.com/api/adduser", formData);
       setMsg("✅ Registration Successful!");
       setTimeout(() => navigate("/home"), 1000); // navigate to home
     } catch (err) {

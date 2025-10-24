@@ -16,7 +16,7 @@ export default function Login() {
     setMsg("");
 
     try {
-      const res = await axios.post("http://localhost:3000/api/login", formData);
+      const res = await axios.post("https://connection-backend-1.onrender.com/api/login", formData);
       localStorage.setItem("token", res.data.token);
       setMsg("✅ Login Successful!");
       setTimeout(() => navigate("/home"), 1000); // navigate to home
